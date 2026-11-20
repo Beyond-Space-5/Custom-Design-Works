@@ -10,7 +10,7 @@ export default function Workflow() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="text-center mb-12">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-navy-900 uppercase">
-            How I Work
+            How Custom Design Works Work
           </h2>
           <p className="text-slate-600 mt-2 text-sm sm:text-base">
             Clear engineering milestones from specification to working files.

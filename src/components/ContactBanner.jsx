@@ -2,7 +2,7 @@ import React from "react";
 import { Phone, MessageCircle } from "lucide-react";
 import { BRAND_INFO, CONTACT_INFO } from "../data/siteContent";
 
-export default function ContactBanner() {
+export default function ContactBanner({ onOpenModal }) {
   const whatsappUrl = `https://wa.me/${CONTACT_INFO.whatsappClean}?text=${encodeURIComponent(
     `Hello ${BRAND_INFO.name}, I would like to request a quote.`
   )}`;
@@ -65,12 +65,12 @@ export default function ContactBanner() {
             <MessageCircle className="w-4 h-4" />
             WhatsApp {CONTACT_INFO.whatsapp}
           </a>
-          <a
-            href="#services"
-            className="inline-flex items-center justify-center px-6 py-3.5 rounded-xl bg-white text-navy-900 font-bold text-sm hover:bg-slate-100 transition cursor-pointer"
+          <button
+            onClick={() => onOpenModal("Project Inquiry")}
+            className="px-6 py-3.5 rounded-xl bg-white text-navy-900 font-bold text-sm hover:bg-slate-100 transition cursor-pointer"
           >
             Request Quote
-          </a>
+          </button>
         </div>
       </div>
     </section>

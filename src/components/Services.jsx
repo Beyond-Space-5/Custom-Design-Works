@@ -7,6 +7,7 @@ export default function Services({ onOpenModal }) {
   const [clientName, setClientName] = useState("");
   const [clientContact, setClientContact] = useState("");
   const [projectDetails, setProjectDetails] = useState("");
+  const [brokenImages, setBrokenImages] = useState({});
 
   const handleOpenQuote = (serviceTitle) => {
     if (onOpenModal) {
@@ -66,14 +67,40 @@ export default function Services({ onOpenModal }) {
               ? Layers
               : Box;
 
+          const showImage = Boolean(service.image) && !brokenImages[service.id];
+
           return (
             <div
               key={service.id}
               className="bg-white rounded-2xl p-6 sm:p-8 shadow-[0_10px_35px_rgba(15,35,66,0.07)] border border-slate-100 hover:border-navy-900/30 transition flex flex-col justify-between"
             >
               <div>
-                <div className="w-12 h-12 rounded-xl bg-navy-900/5 text-navy-900 flex items-center justify-center mb-5">
+                <div className="w-12 h-12 rounded-xl bg-navy-900/5 text-navy-900 flex items-center justify-center mb-4">
                   <Icon className="w-6 h-6 stroke-[1.75]" />
+                </div>
+
+                {/* Service Photo Slot */}
+                <div className="mb-5 overflow-hidden rounded-xl border border-slate-200/90 bg-slate-50 aspect-[4/3] flex items-center justify-center">
+                  {showImage ? (
+                    <img
+                      src={service.image}
+                      alt={service.imageAlt || service.title}
+                      className="h-full w-full object-cover"
+                      loading="lazy"
+                      onError={() =>
+                        setBrokenImages((prev) => ({ ...prev, [service.id]: true }))
+                      }
+                    />
+                  ) : (
+                    <div className="px-4 text-center text-xs text-slate-500">
+                      <p className="font-semibold text-navy-900/80 mb-1">
+                        Photo Slot
+                      </p>
+                      <p className="font-mono text-[11px] break-all">
+                        {service.image ? `public${service.image}` : "Add image path in siteContent.js"}
+                      </p>
+                    </div>
+                  )}
                 </div>
 
                 <h3 className="text-lg font-extrabold text-navy-900 uppercase tracking-tight mb-3">

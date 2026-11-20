@@ -1,6 +1,5 @@
 import React from "react";
 import { BRAND_INFO, CONTACT_INFO } from "../data/siteContent";
-import HeroIllustration from "./HeroIllustration";
 
 export default function Hero() {
   return (
@@ -13,7 +12,7 @@ export default function Hero() {
 
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-10 py-16 sm:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         {/* Left Column: White Text inside Dark Navy Shape */}
-        <div className="lg:col-span-7 text-white space-y-6 pr-0 lg:pr-8">
+        <div className="lg:col-span-8 text-white space-y-6 pr-0 lg:pr-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-mono tracking-wider uppercase text-sky-200">
             {BRAND_INFO.name} • {CONTACT_INFO.location}
           </div>
@@ -27,11 +26,6 @@ export default function Hero() {
             mechanical CAD modeling engineered for real-world reliability and
             manufacturing.
           </p>
-        </div>
-
-        {/* Right Column: PCB Microprocessor, Code Card & 3D CAD Part Illustration */}
-        <div className="lg:col-span-5">
-          <HeroIllustration />
         </div>
       </div>
     </section>

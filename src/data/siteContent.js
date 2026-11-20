@@ -16,28 +16,32 @@ export const SERVICES = [
     id: "firmware",
     number: "01",
     title: "Embedded Firmware Development",
+    image: "/services/firmware.png",
+    imageAlt: "AquaMind Garden embedded controller with OLED display and C firmware code",
     summary:
-      "Production-grade bare-metal and real-time operating system (RTOS) architectures specializing in low-level microcontroller programming, reliable peripheral drivers, and secure telemetry.",
+      "Production firmware and real-time operating system (RTOS) architectures specializing in microcontroller programming, reliable peripheral drivers, and secure telemetry.",
     bullets: [
       {
         lead: "32-Bit Microcontrollers & Wireless SoCs:",
-        text: "Bare-metal register-level drivers, hardware abstraction, and multi-tasking RTOS architectures."
+        text: "Hardware abstraction, and multi-tasking RTOS architectures aligning with MISRA Standards."
       },
       {
         lead: "Peripherals & Buses:",
-        text: "DMA-backed UART, SPI, I2C, CAN bus, and circular ADC sampling buffers."
+        text: "DMA-backed and Interrupt Driven UART, SPI, I2C, CAN bus, and circular ADC sampling buffers."
       },
       {
         lead: "Wireless & Telemetry:",
         text: "Encrypted peer-to-peer wireless links, Wi-Fi connectivity, and real-time web server telemetry."
       }
     ],
-    tags: "C / C++ • RTOS • Bare-Metal • DMA & Timers"
+    tags: "Firmware development • RTOS"
   },
   {
     id: "pcb",
     number: "02",
     title: "PCB Design",
+    image: "/services/pcb-design.png",
+    imageAlt: "Custom multi-layer PCB layout and 3D component render",
     summary:
       "Professional schematic capture, multi-layer printed circuit board layout, and manufacturing-ready Gerber outputs optimized for signal integrity and component reliability.",
     bullets: [
@@ -59,24 +63,26 @@ export const SERVICES = [
   {
     id: "cad",
     number: "03",
-    title: "3D CAD Model Design",
+    title: "3D CAD Modeling and Sheet Metal Design with Detailed 2D Drawings",
+    image: "/services/cad-design.png",
+    imageAlt: "Parametric 3D CAD structural frame assembly and engineering drawings",
     summary:
-      "Parametric 3D mechanical modeling, assemblies, and detailed technical documentation optimized for manufacturing and rapid prototyping.",
+      "Parametric 3D mechanical modeling, assemblies, sheet metal designs, and detailed technical documentation optimized for manufacturing.",
     bullets: [
       {
         lead: "Parametric Modeling & Assemblies:",
-        text: "Advanced parametric part modeling and complex multi-part mechanical assemblies."
+        text: "Parametric part modelling, multi-part mechanical assemblies, and mould design."
+      },
+      {
+        lead: "Sheet Metal & Frame Design:",
+        text: "Sheet metal components, structural frames, and fabrication-ready designs."
       },
       {
         lead: "DFM & DFA Principles:",
-        text: "Engineered specifically for CNC machining, sheet metal, and 3D printing."
-      },
-      {
-        lead: "Enclosure Design:",
-        text: "Custom protective electronics casings, PCB mounts, and thermal venting."
+        text: "Design optimization for 3D printing, sheet metal fabrication, and CNC machining, including protective electronics enclosures."
       }
     ],
-    tags: "Parametric 3D CAD • STEP / STL • DFM / DFA"
+    tags: "Parametric 3D CAD • STEP / STL • Deatiled 2D Drawings"
   }
 ];
 
